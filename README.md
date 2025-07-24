@@ -117,14 +117,14 @@ You can verify the configuration before running the installer:
 **On Linux/macOS:**
 
 ```bash
-chmod +x builds/k3s-installer-linux-amd64
-./builds/k3s-installer-linux-amd64
+chmod +x k3s-installer-linux-amd64
+k3s-installer-linux-amd64
 ```
 
 **On Windows (PowerShell):**
 
 ```powershell
-.\builds\k3s-installer-windows-amd64.exe
+k3s-installer-windows-amd64.exe
 ```
 
 You will be guided through an interactive TUI menu powered by [`bubbletea`](https://github.com/charmbracelet/bubbletea) and [`survey`](https://github.com/AlecAivazis/survey) allowing you to:
