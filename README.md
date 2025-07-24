@@ -1,4 +1,4 @@
-# Igneos.Cloud K3s Cluster Installer (beta)
+# K3Nova K3s Cluster Installer (beta)
 
 The project is written in Go (Golang) and provides a modular, interactive CLI tool designed to automate the installation, configuration, and management of lightweight Kubernetes clusters using K3s. Its main objective is to significantly reduce the manual overhead of setting up a distributed Kubernetes environment while ensuring consistency, repeatability, and operational simplicity.
 
@@ -26,7 +26,7 @@ The core functionality covers the entire cluster lifecycle:
 - **Cluster-wide customization**
   Includes support for mounting NFS volumes, setting up private Docker registries, deploying Ingress resources, and automating TLS certificate issuance via cert-manager.
 
-All operations are orchestrated based on a single declarative **`ic-k3s-cluster-installer-config.json`** file, which defines the full topology and behavior of the cluster, including IP addresses, SSH access credentials, cluster metadata (e.g., domain names, ACME email), and optional services such as Docker Registry, NFS Provisioner, Redis, Grafana, and more.
+All operations are orchestrated based on a single declarative **`config/k3nova-config.json`** file, which defines the full topology and behavior of the cluster, including IP addresses, SSH access credentials, cluster metadata (e.g., domain names, ACME email), and optional services such as Docker Registry, NFS Provisioner, Redis, Grafana, and more.
 
 ```json
 {
@@ -90,23 +90,21 @@ Thanks to this configuration-driven approach, the Igneos.Cloud-K3s-Cluster-Insta
 
 ## Usage
 
-After configuring your `ic-k3s-cluster-installer-config.json`, you can launch the installer using a **pre-built binary** suitable for your operating system.
+After configuring your `config/k3nova-config.json`, you can launch the installer using a **pre-built binary** suitable for your operating system.
 
 ### Step 1: Download the Binary
 
 Choose the binary matching your OS and architecture from the [`builds/`](https://github.com/AndrejSchefer/Ingeos.Cloud-K3s-Cluster-Installer/tree/main/builds) folder. These binaries are updated automatically whenever changes are merged into `main`:
 
-| OS      | Architecture | Binary                                   |
-| ------- | ------------ | ---------------------------------------- |
-| Linux   | amd64        | `builds/k3s-installer-linux-amd64`       |
-| macOS   | amd64        | `builds/k3s-installer-darwin-amd64`      |
-| Windows | amd64        | `builds/k3s-installer-windows-amd64.exe` |
-
-> 📦 You can also build from source using `go build -o builds/k3s-installer .`
+| OS      | Architecture | Binary                            |
+| ------- | ------------ | --------------------------------- |
+| Linux   | amd64        | `k3s-installer-linux-amd64`       |
+| macOS   | amd64        | `k3s-installer-darwin-amd64`      |
+| Windows | amd64        | `k3s-installer-windows-amd64.exe` |
 
 ### Step 2: Prepare Configuration
 
-Make sure your `ic-k3s-cluster-installer-config.json` file exists in the project root or specify the path explicitly.
+Make sure your `config/k3nova-config.json` file exists in the project root or specify the path explicitly.
 
 You can verify the configuration before running the installer:
 
@@ -146,7 +144,7 @@ Here’s the updated menu including the new HA option:
 
 ## Local docker registry
 
-> **This setup applies only if in your `ic-k3s-cluster-installer-config.json` under `docker_registry.local` the flag is set to **`true`**.**
+> **This setup applies only if in your `config/k3nova-config.json` under `docker_registry.local` the flag is set to **`true`**.**
 
 ### 1. Configure `/etc/hosts`
 
@@ -342,7 +340,7 @@ The **High Availability** mode leverages K3s’s embedded etcd to build a resili
 
 ---
 
-### Example `ic-k3s-cluster-installer-config.json`
+### Example `config/k3nova-config.json`
 
 Place this file alongside your installer binary (or pass a custom path via a flag). The `"cluster_init"` flag must be set to `true` on **exactly one** master—the bootstrap node.
 
