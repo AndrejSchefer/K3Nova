@@ -94,13 +94,13 @@ After configuring your `config/k3nova-config.json`, you can launch the installer
 
 ### Step 1: Download the Binary
 
-Choose the binary matching your OS and architecture from the [`builds/`](https://github.com/AndrejSchefer/Ingeos.Cloud-K3s-Cluster-Installer/tree/main/builds) folder. These binaries are updated automatically whenever changes are merged into `main`:
+Choose the binary matching your OS and architecture. These binaries are updated automatically whenever changes are merged into `main`:
 
-| OS      | Architecture | Binary                            |
-| ------- | ------------ | --------------------------------- |
-| Linux   | amd64        | `k3s-installer-linux-amd64`       |
-| macOS   | amd64        | `k3s-installer-darwin-amd64`      |
-| Windows | amd64        | `k3s-installer-windows-amd64.exe` |
+| OS      | Architecture | Binary                     |
+| ------- | ------------ | -------------------------- |
+| Linux   | amd64        | `k3nova-linux-amd64`       |
+| macOS   | amd64        | `k3nova-darwin-amd64`      |
+| Windows | amd64        | `k3nova-windows-amd64.exe` |
 
 ### Step 2: Prepare Configuration
 
@@ -109,7 +109,7 @@ Make sure your `config/k3nova-config.json` file exists in the project root or sp
 You can verify the configuration before running the installer:
 
 ```bash
-k3s-installer-linux-amd64 validate
+k3nova-linux-amd64 validate
 ```
 
 ### 🚀 Step 3: Run the Installer
@@ -117,14 +117,14 @@ k3s-installer-linux-amd64 validate
 **On Linux/macOS:**
 
 ```bash
-chmod +x k3s-installer-linux-amd64
-k3s-installer-linux-amd64
+chmod +x k3nova-linux-amd64
+k3nova-linux-amd64
 ```
 
 **On Windows (PowerShell):**
 
 ```powershell
-k3s-installer-windows-amd64.exe
+k3nova-windows-amd64.exe
 ```
 
 You will be guided through an interactive TUI menu powered by [`bubbletea`](https://github.com/charmbracelet/bubbletea) and [`survey`](https://github.com/AlecAivazis/survey) allowing you to:
