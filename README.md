@@ -109,7 +109,7 @@ Make sure your `config/k3nova-config.json` file exists in the project root or sp
 You can verify the configuration before running the installer:
 
 ```bash
-./builds/k3s-installer-linux-amd64 validate
+k3s-installer-linux-amd64 validate
 ```
 
 ### 🚀 Step 3: Run the Installer
