@@ -86,7 +86,16 @@ All operations are orchestrated based on a single declarative **`config/k3nova-c
 }
 ```
 
-Thanks to this configuration-driven approach, the Igneos.Cloud-K3s-Cluster-Installer is suitable for **developers, DevOps engineers, and platform teams** who require a fast, repeatable way to stand up Kubernetes clusters—whether for local development, internal testing, or hybrid infrastructure scenarios.
+Thanks to this configuration-driven approach, the K3Nova is suitable for **developers, DevOps engineers, and platform teams** who require a fast, repeatable way to stand up Kubernetes clusters—whether for local development, internal testing, or hybrid infrastructure scenarios.
+
+## Why I built K3Nova
+
+I created K3Nova because I want to:
+
+- Make it easier for developers to enter the Cloud-Native and Kubernetes world
+- Help people get a better understanding and feeling for Kubernetes through simple and structured setup flows
+- Enable software engineers to quickly spin up full Kubernetes clusters locally with minimal configuration overhead
+- Let developers focus on building software, not on struggling with complex cluster setups
 
 ## Usage
 
