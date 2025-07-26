@@ -1,0 +1,76 @@
+{
+  "k3s_version": "v1.33.0+k3s1",
+  "control_planes": [
+    {
+      "ip": "192.168.179.10",
+      "ssh_user": "kubernetes",
+      "ssh_pass": "123456",
+      "cluster_init": true
+    },
+    {
+      "ip": "192.168.179.11",
+      "ssh_user": "kubernetes",
+      "ssh_pass": "123456",
+      "cluster_init": false
+    },
+    {
+      "ip": "192.168.179.14",
+      "ssh_user": "kubernetes",
+      "ssh_pass": "123456",
+      "cluster_init": false
+    }
+  ],
+  "workers": [
+    {
+      "ip": "192.168.179.17",
+      "ssh_user": "kubernetes",
+      "ssh_pass": "123456",
+      "cluster_init": false
+    },
+    {
+      "ip": "192.168.179.15",
+      "ssh_user": "kubernetes",
+      "ssh_pass": "123456",
+      "cluster_init": false
+    }
+  ],
+  "k3s_token_file": "master-node-token",
+  "nfs": {
+    "network_CIDR": "192.168.179.0/24",
+    "nfs_server": "192.168.179.17",
+    "nfs_user": "kubernetes",
+    "nfs_pass": "123456",
+    "server": "10.0.0.10",
+    "export-docker-registry": "/mnt/k3s-nfs-docker_registry",
+    "export-grafana": "/mnt/k3s-nfs-grafana",
+    "capacity": "100Gi",
+    "nfs_root_path": "/mnt/k3s-nfs-localstorage"
+  },
+  "docker_registry": {
+    "url": "registry.local",
+    "pvc_storage_capacity": "10Gi",
+    "user": "registry",
+    "pass": "123456",
+    "local": true
+  },
+  "redis": {
+    "url": "redis.local",
+    "pvc_storage_capacity": "10Gi",
+    "user": "registry",
+    "pass": "123456",
+    "image": "redis:8.0.2",
+    "local": true
+  },
+  "grafana": {
+    "grafana_url": "grafana.k3s.localdomain",
+    "grafana_url_nip_io": "grafana.192.168.179.13.nip.io",
+    "pvc_storage_capacity": "",
+    "user": "admin",
+    "pass": "123456",
+    "local": true
+  },
+  "email": "public@andrejschefer.de",
+  "domain": "igneos.cloud.local",
+  "cluster_issuer_name": "letsencrypt-prod",
+  "cluster_token": "K10S-CLUSTER-TOKEN-1234567890"
+}
