@@ -111,6 +111,10 @@ Choose the binary matching your OS and architecture. These binaries are updated 
 | macOS   | amd64        | `k3nova-darwin-amd64`      |
 | Windows | amd64        | `k3nova-windows-amd64.exe` |
 
+> You can run the k3nova CLI binary on any supported operating system listed above.
+> However, K3s itself can only be installed and executed on Linux-based systems.
+> This means the CLI can control remote Linux servers from Windows or macOS, but K3s will always run on the target Linux node.
+
 ### Step 2: Prepare Configuration
 
 Make sure your `config/k3nova-config.json` file exists in the project root or specify the path explicitly.
