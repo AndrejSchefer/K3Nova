@@ -1,0 +1,53 @@
+
+> ✅ Trigger: `push` to `master` or manual `workflow_dispatch`  
+> 🔁 Built with: `builder.bash`  
+> 📦 Published to: `K3Nova` repository under `/builds/`
+
+---
+
+### ✅ Included Binaries
+
+- `k3nova-linux-amd64`
+- `k3nova-linux-arm64`
+- `k3nova-linux-arm`
+- `k3nova-linux-386`
+- `k3nova-linux-riscv64`
+- `k3nova-darwin-amd64`
+- `k3nova-darwin-arm64`
+- `k3nova-windows-amd64.exe`
+- `k3nova-windows-arm64.exe`
+- `k3nova-freebsd-amd64`, `-arm64`
+- `k3nova-netbsd-amd64`
+- `k3nova-openbsd-amd64`
+- `k3nova-dragonfly-amd64`
+
+Each binary is fully self-contained and ready for execution on its respective platform.  
+For usage instructions and configuration, see the included `README.md` and template file:
+
+- `k3nova-config.json.tpl`
+- `Interactive_ic_k3s_installer_menu.png` (CLI preview)
+
+---
+
+### ℹ️ Notes
+
+- This is a **pre-release** and may undergo changes before the first stable version.
+- Feedback is very welcome – feel free to open issues or suggestions.
+
+---
+
+### 📜 Build Workflow Summary
+
+```yaml
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+steps:
+- Checkout
+- Setup Go
+- Run builder.bash
+- Clone target repo (with token)
+- Copy binaries and artifacts
+- Git commit + push
