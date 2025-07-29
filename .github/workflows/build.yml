@@ -1,10 +1,4 @@
 
-> ✅ Trigger: `push` to `master` or manual `workflow_dispatch`  
-> 🔁 Built with: `builder.bash`  
-> 📦 Published to: `K3Nova` repository under `/builds/`
-
----
-
 ### ✅ Included Binaries
 
 - `k3nova-linux-amd64`
