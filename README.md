@@ -155,50 +155,59 @@ Here’s the updated menu including the new HA option:
 - 🗃️ Installs Redis with persistent storage and authentication
 - 🐳 Create and configure a private Docker Registry
 
-## Local docker registry
+Here’s the improved version in English, keeping it clear, structured, and detailed:
 
-> **This setup applies only if in your `config/k3nova-config.json` under `docker_registry.local` the flag is set to **`true`**.**
+## **Local Docker Registry – Setup Guide**
 
-### 1. Configure `/etc/hosts`
+> This setup only applies if, in your `config/k3nova-config.json`, the value for `docker_registry.local` is set to `true`.
 
-On your local machine (e.g., macOS/Linux), add the `registry.local` hostname pointing to your Kubernetes node’s IP:
+### **1. Configure `/etc/hosts`**
+
+On your local machine (macOS or Linux), add a hostname entry for `registry.local` that points to the IP address of your Kubernetes Control Plane node:
 
 ```bash
 sudo tee -a /etc/hosts <<EOF
 # Local Docker Registry
-<IP-of-first-control-planes-node>   registry.local
+<IP-of-first-control-plane-node>   registry.local
 EOF
 ```
 
-> **Note:** Replace `<IP-of-first-control-planes-node>` with the IP address of your first Control Planes node, or use `127.0.0.1` if you are using `kubectl port-forward`.
+> **Note:** Replace `<IP-of-first-control-plane-node>` with the actual IP address of your first Control Plane node.
+> If you are using `kubectl port-forward`, you can use `127.0.0.1` instead.
 
-### 2. Docker Desktop: "insecure-registries"
+### **2. Enable "insecure-registries" in Docker Desktop**
 
-To force Docker to use HTTP instead of HTTPS, add the following entry in **Docker Desktop → Settings → Docker Engine**, just below the `"features"` section:
+To force Docker to use HTTP instead of HTTPS for the registry, add the following entry in
+**Docker Desktop → Settings → Docker Engine**, just below the `"features"` section:
 
-```jsonc
+```json
 {
   /* ... existing settings ... */
   "features": {
     "buildkit": true
   },
-  "insecure-registries": ["registry.local:80"]
+  "insecure-registries": ["registry.local:5000"]
 }
 ```
 
-Click **Apply & Restart** to reload Docker with the new configuration.
+Click **Apply & Restart** to reload Docker with the updated configuration.
 
-### 3. Using the Registry
+### **3. Using the Registry**
+
+**Log in:**
 
 ```bash
-# Log in
-docker login registry.local:80  # -> with port 80
-
-# Pull an image
-docker pull registry.local:80/<your-image>:latest
+docker login registry.local:5000  # Use port 5000
 ```
 
-That’s it — your local registry is now running over HTTP (port 80) under `registry.local` without TLS.
+**Pull an image:**
+
+```bash
+docker pull registry.local:5000/<your-image>:latest
+```
+
+**Done** – your local registry is now accessible over HTTP on `registry.local:5000` without TLS.
+This setup works in combination with **Traefik** and an **IngressRouteTCP**, which forwards port **5000** directly to the Registry service inside your Kubernetes cluster.
 
 ## Docker Registry
 

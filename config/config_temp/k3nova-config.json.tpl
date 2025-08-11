@@ -50,5 +50,5 @@
   "email": "",
   "domain": "",
   "cluster_issuer_name": "letsencrypt-prod"
-  "k3s_version": "v1.33.0+k3s1"
+  "k3s_version": "v1.33.0+k3s1" # "v1.30.14+k3s2"
 }
