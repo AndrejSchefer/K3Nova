@@ -46,7 +46,7 @@ All operations are orchestrated based on a single declarative **`config/k3nova-c
     }
   ],
   "docker_registry":{
-    "url": "",                     # if local use registry.local:80
+    "url": "",                     # if local use registry.local:5000
     "pvc_storage_capacity":"10Gi",
     "pass": "123456",
     "user": "registry",
