@@ -22,8 +22,8 @@
     local: false
   },
   "grafana": {
-    "grafana_url": "grafana.k3s.localdomain",
-    "grafana_url_nip_io": "grafana.192.168.179.13.nip.io",
+    "grafana_url": "grafana.local",
+    "grafana_url_nip_io": "grafana.192.168.179.13.nip.io", # Instant, automatic DNS resolution → good for quick testing or when other devices should access without /etc/hosts.
     "pass": "123456",
     "user": "admin",
     "local": true
