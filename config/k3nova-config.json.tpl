@@ -22,8 +22,8 @@
     local: false
   },
   "grafana": {
-    "grafana_url": "grafana.k3s.localdomain",
-    "grafana_url_nip_io": "grafana.192.168.179.13.nip.io",
+    "grafana_url": "grafana.local",
+    "grafana_url_nip_io": "grafana.192.168.179.13.nip.io", # Instant, automatic DNS resolution → good for quick testing or when other devices should access without /etc/hosts.
     "pass": "123456",
     "user": "admin",
     "local": true
@@ -50,5 +50,5 @@
   "email": "",
   "domain": "",
   "cluster_issuer_name": "letsencrypt-prod"
-  "k3s_version": "v1.33.0+k3s1"
+  "k3s_version": "v1.33.0+k3s1" # "v1.30.14+k3s2"
 }
