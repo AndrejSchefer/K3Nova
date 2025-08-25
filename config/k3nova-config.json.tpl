@@ -17,12 +17,14 @@
   "docker_registry":{
     "url": "",
     "pvc_storage_capacity":"10Gi",
+    "cluster_issuer": "letsencrypt-http01", 
     "pass": "123456",
     "user": "registry",
     local: false
   },
   "grafana": {
     "grafana_url": "grafana.local",
+    "cluster_issuer": "letsencrypt-http01-staging", # letsencrypt-http01-staging, letsencrypt-http01,letsencrypt-dns01-ovh-staging,letsencrypt-dns01-ovh   
     "grafana_url_nip_io": "grafana.192.168.179.13.nip.io", # Instant, automatic DNS resolution → good for quick testing or when other devices should access without /etc/hosts.
     "pass": "123456",
     "user": "admin",
@@ -30,6 +32,7 @@
   },
   "redis": {
     "url": "redis.local",
+    "cluster_issuer": "letsencrypt-http01",
     "pvc_storage_capacity": "10Gi",
     "pass": "123456",
     "user": "registry",
@@ -46,6 +49,17 @@
     "export-docker-registry": "/mnt/k3s-nfs-docker_registry",
     "nfs_root_path": "/mnt/k3s-nfs-localstorage",
     "capacity": "100Gi"
+  },
+  "ovh_webhook":{
+    "email":"",
+    "dns_zone":"",
+    "group_name":"",
+    "endpoint":"",
+    "consumer_key":"",
+    "application_key":"",
+    "application_secret":"",
+    "image":"",
+    "consumer_key":""
   },
   "email": "",
   "domain": "",

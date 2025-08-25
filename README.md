@@ -35,7 +35,7 @@ All operations are orchestrated based on a single declarative **`config/k3nova-c
       "ip": "",
       "ssh_user": "",
       "ssh_pass": "",
-      "cluster_init": true # For High Availability
+      "cluster_init": true                        # For High Availability
     }
   ],
   "workers": [
@@ -46,7 +46,8 @@ All operations are orchestrated based on a single declarative **`config/k3nova-c
     }
   ],
   "docker_registry":{
-    "url": "",                     # if local use registry.local:80
+    "url": "",                                    # If local use registry.local:5000
+    "cluster_issuer": "letsencrypt-http01",       # letsencrypt-http01-stage
     "pvc_storage_capacity":"10Gi",
     "pass": "123456",
     "user": "registry",
@@ -54,6 +55,7 @@ All operations are orchestrated based on a single declarative **`config/k3nova-c
   },
   "redis": {
     "url": "redis.local",
+    "cluster_issuer": "letsencrypt-http01",       # letsencrypt-http01-stage
     "pvc_storage_capacity": "10Gi",
     "pass": "123456",
     "user": "registry",
@@ -61,7 +63,8 @@ All operations are orchestrated based on a single declarative **`config/k3nova-c
     "local": true
   },
   "grafana": {
-    "grafana_url": "grafana.k3s.localdomain",
+    "grafana_url": "grafana.local",
+    "cluster_issuer": "letsencrypt-http01",       # letsencrypt-http01-stage
     "grafana_url_nip_io": "grafana.192.168.179.13.nip.io",
     "pass": "123456",
     "user": "admin",
