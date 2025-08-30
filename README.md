@@ -1,6 +1,12 @@
-# K3Nova K3s Cluster Installer (beta)
+# K3Nova K3s Cluster Installer (Alpha)
 
-The project is written in Go (Golang) and provides a modular, interactive CLI tool designed to automate the installation, configuration, and management of lightweight Kubernetes clusters using K3s. Its main objective is to significantly reduce the manual overhead of setting up a distributed Kubernetes environment while ensuring consistency, repeatability, and operational simplicity.
+The project is written in Go (Golang) and provides a modular, interactive CLI tool designed to automate the installation, configuration, and management of lightweight Kubernetes clusters using K3s. Its main objective is to significantly
+reduce the manual overhead of setting up a distributed Kubernetes environment while ensuring consistency, repeatability, and operational simplicity.
+
+> **Note**: K3Nova is currently in active development.  
+> While the core features are functional, you may still encounter some bugs or unfinished features.  
+> Feedback, ideas, and contributions are highly appreciated!  
+> Join the discussion here: [K3Nova Discussions](https://github.com/AndrejSchefer/K3Nova/discussions)
 
 ![Interactive K3s Installer Menu](Interactive_ic_k3s_installer_menu.png)
 
