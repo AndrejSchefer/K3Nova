@@ -91,7 +91,18 @@ All operations are orchestrated based on a single declarative **`config/k3nova-c
   "domain": "",
   "cluster_issuer_name": "letsencrypt-prod",
   "k3s_version": "v1.33.0+k3s1",
-  "cluster_token": "K10S-CLUSTER-TOKEN-1234567890"
+  "cluster_token": "K10S-CLUSTER-TOKEN-1234567890",
+  "claims": {                                    # License data. not need on free version
+    "email": "",
+    "firstName": "",
+    "lastName": "",
+    "address": {
+      "street": "",
+      "city": "",
+      "zip": "",
+      "country": ""
+    }
+  }
 }
 ```
 
