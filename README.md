@@ -1,6 +1,6 @@
 # K3Nova K3s Cluster Installer
 
-> Current Version: **0.0.7** (beta) • Build Date: **06.09.2025**
+> Current Version: **0.0.1** (beta) • Build Date: **06.09.2025**
 
 K3Nova is a **modular**, **interactive** CLI tool written in **Go** that automates the installation, configuration, and management of lightweight Kubernetes clusters using **K3s**. Its goal is to significantly reduce the manual overhead of setting up distributed Kubernetes environments while ensuring consistency, repeatability, and operational simplicity.
 
@@ -14,7 +14,7 @@ K3Nova is **proprietary software** and uses a license-based model with three edi
 | -------------- | ------------------ | ----------- | -------------------------------------- | ---------- |
 | **Free**       | 1                  | 2           | traefik_adv, monitoring, nfs, registry | Never      |
 | **Pro**        | 3                  | 10          | All features                           | 1 Year     |
-| **Enterprise** | ∞                  | ∞           | All features + SLA support             | 3 Years    |
+| **Enterprise** | ∞                  | ∞           | All features                           | 3 Years    |
 
 ### License Activation
 
