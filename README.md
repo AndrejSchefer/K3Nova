@@ -145,10 +145,6 @@ You can verify the configuration before running the installer:
 k3nova-linux-amd64 validate
 ```
 
-Got it, Andrej 🙂
-Here’s a clean and professional **English version** for your K3Nova README:
-
----
 
 ### 🚀 **Step 3: Run the Installer**
 
