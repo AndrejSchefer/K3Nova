@@ -145,14 +145,31 @@ You can verify the configuration before running the installer:
 k3nova-linux-amd64 validate
 ```
 
-### 🚀 Step 3: Run the Installer
+Got it, Andrej 🙂
+Here’s a clean and professional **English version** for your K3Nova README:
 
-**On Linux/macOS:**
+---
+
+### 🚀 **Step 3: Run the Installer**
+
+**On Linux:**
 
 ```bash
 chmod +x k3nova-linux-amd64
-k3nova-linux-amd64
+./k3nova-linux-amd64
 ```
+
+**On macOS:**
+
+```bash
+chmod +x k3nova-darwin-arm64
+sudo xattr -r -d com.apple.quarantine ./k3nova-darwin-arm64
+./k3nova-darwin-arm64
+```
+
+> 💡 **Note for macOS users:**
+> macOS uses **Gatekeeper** to block binaries from unknown developers.
+> The `xattr` command removes the quarantine flag so you can run the installer without restrictions.
 
 **On Windows (PowerShell):**
 
