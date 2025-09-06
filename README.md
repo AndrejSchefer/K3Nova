@@ -144,7 +144,7 @@ You can verify the configuration before running the installer:
 ```bash
 k3nova-linux-amd64 validate
 ```
-
+t
 ### 🚀 **Step 3: Run the Installer**
 
 **On Linux:**
