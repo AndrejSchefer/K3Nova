@@ -1,6 +1,6 @@
 # K3Nova Proprietary License (EULA)
 
-**Version:** 0.0.6  
+**Version:** 0.0.7  
 **Datum:** 06.09.2025  
 **Inhaber:** Andrej Schefer — igneos.cloud
 
