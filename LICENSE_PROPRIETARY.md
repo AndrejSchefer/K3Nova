@@ -1,6 +1,6 @@
 # K3Nova Proprietary License (EULA)
 
-**Version:** 0.0.7  
+**Version:** 0.0.8  
 **Datum:** 07.09.2025  
 **Inhaber:** Andrej Schefer
 **Kontakt:** andrej@schefer.dev
@@ -81,4 +81,32 @@ Es gilt **deutsches Recht**. Gerichtsstand ist **Heidelberg, Deutschland**.
 
 ## 11. Lizenzannahme
 
-Mit Installation, Nutzung oder Update der Software erklärt der Lizenznehmer, dass er diese Lizenzbedingungen akzeptiert.
+## Mit Installation, Nutzung oder Update der Software erklärt der Lizenznehmer, dass er diese Lizenzbedingungen akzeptiert.
+
+## 12. Lizenzaktivierung
+
+Um eine **Pro**- oder **Enterprise-Lizenz** erfolgreich zu aktivieren, müssen folgende Schritte ausgeführt werden:
+
+1. Platzieren Sie die Ihnen zugesandte Lizenzdatei:
+
+```bash
+./license/k3nova-license.jwt
+```
+
+2. Tragen Sie in der Datei config/k3nova-config.json Ihre persönlichen Daten unter dem Abschnitt claims vollständig ein.
+
+Diese Angaben müssen exakt mit den Daten übereinstimmen, die bei der Lizenzregistrierung hinterlegt wurden:
+
+```json
+"claims": {
+  "email": "your.email@example.com",
+  "firstName": "John",
+  "lastName": "Doe",
+  "address": {
+    "street": "Example Street 12",
+    "city": "Heidelberg",
+    "zip": "69115",
+    "country": "Germany"
+  }
+}
+```
