@@ -1,6 +1,6 @@
-# 🌟 K3Nova — K3s Cluster Installer
+# K3Nova — K3s Cluster Installer
 
-> **Current Version:** `0.0.10` • **Build Date:** `07.09.2025`
+> **Current Version:** `0.0.11` • **Build Date:** `07.09.2025`
 
 K3Nova is a **modular**, **interactive** CLI tool written in **Go** that automates the installation, configuration, and management of lightweight Kubernetes clusters using **K3s**.  
 Its goal is to drastically reduce the complexity of setting up distributed Kubernetes environments while ensuring **consistency**, **repeatability**, and **operational simplicity**.
@@ -121,33 +121,7 @@ I created K3Nova because I want to:
 - Enable software engineers to quickly spin up full Kubernetes clusters locally with minimal configuration overhead
 - Let developers focus on building software, not on struggling with complex cluster setups
 
-## 🔑 License & Editions
-
-K3Nova is **proprietary software** and uses a license-based model with three editions:
-
-| Edition        | Max Control Planes | Max Workers | Features                                                           | Expiration |
-| -------------- | ------------------ | ----------- | ------------------------------------------------------------------ | ---------- |
-| **Free**       | 1                  | 2           | Monitoring, Registry, Redis, Advanced Traefik and NFS Provisionber | Never      |
-| **Pro**        | 3                  | 10          | All advanced features                                              | 1 Year     |
-| **Enterprise** | ∞                  | ∞           | Full feature set                                                   | 1 Year     |
-
-### License Activation
-
-1. Request a Pro/Enterprise license via email: **andrej[@]schefer.dev**
-2. You will receive a signed license file: `k3nova-license.jwt`
-3. Place it in the following folder:
-
-```bash
-./license/k3nova-license.jwt
-```
-
-4. On the next start, K3Nova will unlock the correct edition automatically.
-
-> 💡 If no valid license is found, K3Nova defaults to the **Free Edition**.
-
-For full license terms, see [LICENSE_PROPRIETARY.md](LICENSE_PROPRIETARY.md).
-
-## 🚀 Key Features
+## Key Features
 
 | Feature                                     | Description                                                                           |
 | ------------------------------------------- | ------------------------------------------------------------------------------------- |
@@ -162,7 +136,7 @@ For full license terms, see [LICENSE_PROPRIETARY.md](LICENSE_PROPRIETARY.md).
 | 🐳 **Private Docker Registry**              | Easily create and configure your internal Docker registry                             |
 | 🌐 **Advanced Traefik Features**            | Full support for Traefik CRDs, IngressRoutes, IngressRouteTCP, and custom EntryPoints |
 
-## 🛠️ Usage
+## Usage
 
 ### **Step 1 — Download the Binary**
 
@@ -214,7 +188,7 @@ sudo xattr -r -d com.apple.quarantine ./k3nova-darwin-arm64
 k3nova-windows-amd64.exe
 ```
 
-## 🌐 Advanced Traefik Features
+## Advanced Traefik Features
 
 K3Nova provides **built-in support** for advanced Traefik configurations:
 
@@ -275,7 +249,33 @@ Place this file alongside your installer binary (or pass a custom path via a fla
 }
 ```
 
-## 📘 Documentation & Support
+## License & Editions
+
+K3Nova is **proprietary software** and uses a license-based model with three editions:
+
+| Edition        | Max Control Planes | Max Workers | Features                                                           | Expiration |
+| -------------- | ------------------ | ----------- | ------------------------------------------------------------------ | ---------- |
+| **Free**       | 1                  | 2           | Monitoring, Registry, Redis, Advanced Traefik and NFS Provisionber | Never      |
+| **Pro**        | 3                  | 10          | All advanced features                                              | 1 Year     |
+| **Enterprise** | ∞                  | ∞           | Full feature set                                                   | 1 Year     |
+
+### License Activation
+
+1. Request a Pro/Enterprise license via email: **andrej[@]schefer.dev**
+2. You will receive a signed license file: `k3nova-license.jwt`
+3. Place it in the following folder:
+
+```bash
+./license/k3nova-license.jwt
+```
+
+4. On the next start, K3Nova will unlock the correct edition automatically.
+
+> 💡 If no valid license is found, K3Nova defaults to the **Free Edition**.
+
+For full license terms, see [LICENSE_PROPRIETARY.md](LICENSE_PROPRIETARY.md).
+
+## Documentation & Support
 
 - 📚 **Docs & Tutorials:** [K3Nova Docs](https://igneos.blog/k3nova/)
 - 💬 **Discussions:** [GitHub Discussions](https://github.com/AndrejSchefer/K3Nova/discussions)
