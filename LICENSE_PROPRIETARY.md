@@ -1,8 +1,9 @@
 # K3Nova Proprietary License (EULA)
 
-**Version:** 0.0.2  
-**Datum:** 06.09.2025  
-**Inhaber:** Andrej Schefer — igneos.cloud
+**Version:** 0.0.1  
+**Datum:** 07.09.2025  
+**Inhaber:** Andrej Schefer
+**Kontakt:** andrej@schefer.dev
 
 ---
 
@@ -23,7 +24,7 @@ Der Lizenzgeber gewährt dem Lizenznehmer ein **nicht exklusives, nicht übertra
 | -------------- | ------------------ | ---------- | -------------------------------------- | ----------- |
 | **Free**       | 1                  | 2          | traefik_adv, monitoring, nfs, registry | Niemals     |
 | **Pro**        | 3                  | 10         | Alle Features                          | 1 Jahr      |
-| **Enterprise** | ∞                  | ∞          | Alle Features                          | 3 Jahre     |
+| **Enterprise** | ∞                  | ∞          | Alle Features                          | 1 Jahre     |
 
 ## 3. Lizenzdatei (`license.jwt`)
 
