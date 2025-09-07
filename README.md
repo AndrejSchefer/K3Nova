@@ -5,6 +5,11 @@
 K3Nova is a **modular**, **interactive** CLI tool written in **Go** that automates the installation, configuration, and management of lightweight Kubernetes clusters using **K3s**.  
 Its goal is to drastically reduce the complexity of setting up distributed Kubernetes environments while ensuring **consistency**, **repeatability**, and **operational simplicity**.
 
+> **Note**: K3Nova is currently in active development.
+> While the core features are functional, you may still encounter some bugs or unfinished features.
+> Feedback, ideas, and contributions are highly appreciated!
+> Join the discussion here: [K3Nova Discussions](https://github.com/AndrejSchefer/K3Nova/discussions)
+
 ![Interactive K3s Installer Menu](k3nova.png)
 
 This tool enables users to provision a complete K3s cluster consisting of a **single Control Planes node** and multiple worker nodes, or to deploy a full **High Availability (HA) control plane** across three or more Control Planes nodes. It establishes SSH connections to the target hosts (either physical servers or virtual machines), where it executes installation routines, applies configurations, and starts necessary services. Authentication is handled via user/password or SSH key pairs, as defined in a declarative JSON-based configuration file.
@@ -274,6 +279,15 @@ K3Nova is **proprietary software** and uses a license-based model with three edi
 > 💡 If no valid license is found, K3Nova defaults to the **Free Edition**.
 
 For full license terms, see [LICENSE_PROPRIETARY.md](LICENSE_PROPRIETARY.md).
+
+## High Availability Mode (HA)
+
+The **High Availability** mode leverages K3s’s embedded etcd to build a resilient control plane across **three or more master nodes**. In this configuration, one node bootstraps the cluster (`--cluster-init`), and the remaining masters join it to form an HA etcd quorum. Workers can then connect to the HA cluster just as they would in a single-master setup.
+
+### Prerequisites
+
+- **At least three** Linux hosts (VMs or physical machines) running a supported Ubuntu Server release
+- Network connectivity: all masters and workers must reach each other on ports **6443** (K3s API) and **2379–2380** (etcd)
 
 ## Documentation & Support
 
