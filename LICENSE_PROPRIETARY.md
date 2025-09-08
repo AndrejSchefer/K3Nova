@@ -1,6 +1,6 @@
 # K3Nova Proprietary License (EULA)
 
-**Version:** 0.0.13  
+**Version:** 0.0.14  
 **Datum:** 08.09.2025  
 **Inhaber:** Andrej Schefer
 **Kontakt:** andrej@schefer.dev
