@@ -1,6 +1,6 @@
 # K3Nova — K3s Cluster Installer
 
-> **Current Version:** `0.0.11` • **Build Date:** `07.09.2025`
+> **Current Version:** `0.0.12` • **Build Date:** `08.09.2025`
 
 K3Nova is a **modular**, **interactive** CLI tool written in **Go** that automates the installation, configuration, and management of lightweight Kubernetes clusters using **K3s**.  
 Its goal is to drastically reduce the complexity of setting up distributed Kubernetes environments while ensuring **consistency**, **repeatability**, and **operational simplicity**.
@@ -279,15 +279,6 @@ K3Nova is **proprietary software** and uses a license-based model with three edi
 > 💡 If no valid license is found, K3Nova defaults to the **Free Edition**.
 
 For full license terms, see [LICENSE_PROPRIETARY.md](LICENSE_PROPRIETARY.md).
-
-## High Availability Mode (HA)
-
-The **High Availability** mode leverages K3s’s embedded etcd to build a resilient control plane across **three or more master nodes**. In this configuration, one node bootstraps the cluster (`--cluster-init`), and the remaining masters join it to form an HA etcd quorum. Workers can then connect to the HA cluster just as they would in a single-master setup.
-
-### Prerequisites
-
-- **At least three** Linux hosts (VMs or physical machines) running a supported Ubuntu Server release
-- Network connectivity: all masters and workers must reach each other on ports **6443** (K3s API) and **2379–2380** (etcd)
 
 ## Documentation & Support
 
