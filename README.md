@@ -1,6 +1,6 @@
 # K3Nova — K3s Cluster Installer
 
-> **Current Version:** `0.0.14` • **Build Date:** `08.09.2025`
+> **Current Version:** `0.1.0` • **Build Date:** `24.09.2025`
 
 K3Nova is a **modular**, **interactive** CLI tool written in **Go** that automates the installation, configuration, and management of lightweight Kubernetes clusters using **K3s**.  
 Its goal is to drastically reduce the complexity of setting up distributed Kubernetes environments while ensuring **consistency**, **repeatability**, and **operational simplicity**.
@@ -279,6 +279,16 @@ K3Nova is **proprietary software** and uses a license-based model with three edi
 > 💡 If no valid license is found, K3Nova defaults to the **Free Edition**.
 
 For full license terms, see [LICENSE_PROPRIETARY.md](LICENSE_PROPRIETARY.md).
+
+## Third-Party Components
+
+K3Nova uses the following third-party open source software:
+
+- **Headlamp** – A Kubernetes Web UI  
+  Licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).  
+  Copyright (c) 2020-2025 The Headlamp Authors.
+
+Changes have been made to the original manifests for integration with K3Nova.
 
 ## Documentation & Support
 
